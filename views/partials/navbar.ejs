@@ -1,41 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Bootstrap Example</title>
+  <title>Home Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    .sidebar {
+      width: 220px;
+      min-height: calc(100vh - 70px);
+      border-right: 1px solid #ccc;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 20px;
+      text-decoration: none;
+      color: black;
+      border-bottom: 1px solid #ccc;
+      font-size: 18px;
+    }
+
+    .sidebar a:hover {
+      background-color: #f2f2f2;
+    }
+
+    .content {
+      flex: 1;
+      padding: 25px;
+    }
+
+    .book-card {
+      border: 1px solid #ccc;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .book-img {
+      width: 80px;
+      height: 80px;
+      border: 1px solid #999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+    }
+  </style>
 </head>
+
 <body>
-<div>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="javascript:void(0)">Logo</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="mynavbar">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Link</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="text" placeholder="Search">
-        <button class="btn btn-primary" type="button">Search</button>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm bg-light border-bottom">
+    <div class="container-fluid">
+
+      <!-- Left side -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <span class="me-3 fs-3">☰</span>
+        <span class="fs-4">Manga Tracker</span>
+      </a>
+
+      <!-- Right side -->
+      <form class="d-flex ms-auto">
+        <input class="form-control me-2" type="text" placeholder="Search input">
+
+        <button class="btn btn-outline-dark me-2" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">
+            <path fill="currentColor"
+              d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z">
+            </path>
+          </svg>
+        </button>
+
+        <button class="btn btn-outline-dark" type="button">+ Add</button>
       </form>
+
     </div>
-  </div>
-</nav>
-</div>
+  </nav>
 </body>
+
 </html>
-
-

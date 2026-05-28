@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit Manhwa</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container mt-5">
+    <h2>Edit Manhwa</h2>
+
+    <form action="/editmanhwa/<%= manhwa.id %>" method="POST">
+
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" name="name" class="form-control" value="<%= manhwa.name %>" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Image Path</label>
+            <input type="text" name="image" class="form-control" value="<%= manhwa.image %>" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Chapter</label>
+            <input type="number" name="chapter" class="form-control" value="<%= manhwa.chapter %>" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Status</label>
+            <select name="status" class="form-control">
+                <option value="Reading" <%= manhwa.status === 'Reading' ? 'selected' : '' %>>Reading</option>
+                <option value="Completed" <%= manhwa.status === 'Completed' ? 'selected' : '' %>>Completed</option>
+                <option value="Planned" <%= manhwa.status === 'Planned' ? 'selected' : '' %>>Planned</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update</button>
+        <a href="/" class="btn btn-secondary">Cancel</a>
+
+    </form>
+</div>
+
+</body>
+</html>
